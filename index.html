@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Video Downloader</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#141e30,#243b55);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.box {
+  background: #111;
+  padding: 25px;
+  border-radius: 10px;
+  width: 95%;
+  max-width: 420px;
+  text-align: center;
+}
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #00c853;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+}
+.note {
+  font-size: 12px;
+  margin-top: 15px;
+  color: #ccc;
+}
+</style>
+</head>
+
+<body>
+<div class="box">
+  <h2>Audio / Video Downloader</h2>
+  <p>Direct file link paste kare</p>
+
+  <input type="text" id="url" placeholder="https://example.com/file.mp3">
+
+  <button onclick="download()">Download</button>
+
+  <div class="note">
+    ⚠️ Sirf wahi file download kare jiska aapko adhikar ho
+  </div>
+</div>
+
+<script>
+function download() {
+  var link = document.getElementById("url").value;
+  if(link === ""){
+    alert("Link paste kare");
+    return;
+  }
+  window.open(link, "_blank");
+}
+</script>
+
+</body>
+  </html>⁷
